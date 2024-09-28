@@ -8,6 +8,3 @@ function addCart(){
     alert("Added to cart");
     location.reload()
 }
-function Goback(){
-    window.history.back()
-}

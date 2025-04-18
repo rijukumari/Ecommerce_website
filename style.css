@@ -3,9 +3,6 @@
     padding: 0%;
     font-family: 'Roboto',sans-serif;
 }
-/* body{
-    background-color: #eeee;
-} */
 nav{
     display: flex;
     justify-content: space-between;
@@ -16,6 +13,15 @@ nav{
     top: 0;
     z-index: 1000; 
     
+}
+#click{
+    display: none;
+}
+.menu-btn{
+    display: none;
+    font-size: 30px;
+    margin-right: 45px;
+    cursor: pointer;
 }
 nav .logo{
     font-size: 2rem;
@@ -36,6 +42,10 @@ ul li a {
     font-size: 20px;
     color: black;
 }
+/* #click {
+    display: none;
+  } */
+  
 ul i{
     font-size: 22px;
 }
@@ -125,6 +135,7 @@ ul i:hover{
     color: yellow;
 }
 .blog{
+    margin: 5%;
     display: flex;
     justify-content: center;
     width: 50%;
@@ -134,7 +145,6 @@ ul i:hover{
     border-radius: 11px;
 }
 .blog:hover{
-    transition: 0.6s ease;
     width: 520px;
     height: 320px;
 
@@ -144,7 +154,6 @@ ul i:hover{
 }
 .blogText{
     padding: 12px;
-    margin-top: 33px;
 }
 .blogText a{
     width: 130px;
@@ -156,6 +165,7 @@ ul i:hover{
     position: relative;
     top: 22px;
     border-radius: 5px;
+    text-decoration: none;
 }
 .letter{
     display: flex;
@@ -309,4 +319,172 @@ ul i:hover{
     font-size: 22px;
     margin-inline: 11px;
     margin-top: 22px;
+}
+/* Responsive Styles */
+
+@media (max-width: 1024px) {
+    nav ul li {
+        padding: 15px;
+    
+      }
+      .menu-btn {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        cursor: pointer;
+      }
+      label i{
+        display: block;
+      }
+    
+      #click:checked~.menu-btn i:before {
+        content: "\f00d";
+      }
+    
+      nav ul {
+        position: fixed;
+        top: 80px;
+        right: 100%;
+        left: -120%;
+        background: #e7d3d3;
+        height: 50vh;
+        width: 100%;
+        display: block;
+        text-align: center;
+        transition: all 0.5s ease;
+      }
+    
+      #click:checked~ul {
+        left: 0%;
+      }
+    .main {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .main img {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .mainText h1 {
+        font-size: 48px;
+    }
+
+    .card {
+        flex-wrap: wrap;
+    }
+
+    .blog {
+
+        flex-direction: column;
+        width: 90%;
+        height: 60vh;
+        align-items: center;
+    }
+
+    .Contactme {
+        flex-direction: column;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .Contactme img {
+        width: 100%;
+    }
+
+    .ContactText {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .me {
+        flex-direction: column;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .me img {
+        width: 100%;
+    }
+
+    .aboutText {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .form input, .form button {
+        width: 90%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-right: 0;
+        margin-top: 10px;
+    }
+
+    nav .logo {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        /* flex-direction: column; */
+        align-items: center;
+    }
+
+    nav ul {
+        align-items: center;
+    }
+
+    .mainText h1 {
+        font-size: 36px;
+    }
+
+    .card .crd {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .letter {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .inp {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .inp input, .inp button {
+        width: 90%;
+        margin: 5px 0;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer .footerText {
+        margin: 15px 0;
+    }
+
+    .cart {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cart img {
+        width: 90%;
+    }
+
+    .cartText {
+        text-align: center;
+    }
 }
